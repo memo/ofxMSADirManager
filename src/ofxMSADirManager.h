@@ -1,7 +1,7 @@
 
 #pragma once
 
-#include "MSADataProtector.h"
+//#include "MSADataProtector.h"
 
 namespace msa {
 	
@@ -83,7 +83,7 @@ namespace msa {
 		void loadResource(string filename) {
 			ofImage *s = resources.back() = new ofImage();
 			s->loadImage(filename);
-//			resources.back().loadImage(filename);
+//			resources.back().load(filename);
 		}
 	};
 	
@@ -92,7 +92,7 @@ namespace msa {
 	public:
 		void loadResource(string filename) {
 			ofSoundPlayer *s = resources.back() = new ofSoundPlayer();
-			s->loadSound(filename);
+			s->load(filename);
 		}
 	};
 	
@@ -100,7 +100,7 @@ namespace msa {
 	public:
 		void loadResource(string filename) {
 			ofVideoPlayer *s = resources.back() = new ofVideoPlayer();
-			s->loadMovie(filename);
+			s->load(filename);
 		}
 	};
 	
