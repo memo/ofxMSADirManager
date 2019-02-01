@@ -9,6 +9,9 @@ namespace msa {
 	public:
 		ofDirectory DIR;
 
+        // hack, to avoid error when not using MSADataProtectorb
+        void checkFileMD5(string s, string key, bool check) {return true;}
+
 		void setup(string path, const char *ext = NULL, string* md5 = NULL) {
 			currentIndex = 0;
 			if(ext) DIR.allowExt(ext);
